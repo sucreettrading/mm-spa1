@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M&M SPA Marrakech – Spa à Domicile | Massage, Hammam, Soins Beauté</title>
+<meta name="description" content="M&M SPA, spa à domicile à Marrakech. Massages relaxants, hammam traditionnel marocain, soins visage, épilation et beauté. Réservez au 06 60 70 64 06, 7j/7 de 9h à 21h.">
+<meta name="keywords" content="spa à domicile Marrakech, massage à domicile Marrakech, hammam à domicile Marrakech, spa Marrakech, massage Marrakech, soin visage Marrakech, épilation Marrakech">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="FvHoKSGqGkzVX2QbNS6YBqSTNp_BM12C8Y6tsDsXkJg" />
+<link rel="canonical" href="https://mm-spa.netlify.app/">
+
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="M&M SPA Marrakech – Spa à Domicile">
+<meta property="og:description" content="Massages, hammam traditionnel et soins beauté livrés chez vous à Marrakech. Réservation au 06 60 70 64 06.">
+<meta property="og:image" content="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<meta property="og:url" content="https://mm-spa.netlify.app/">
+<meta property="og:locale" content="fr_MA">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DaySpa",
+  "name": "M&M SPA",
+  "image": "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg",
+  "telephone": "+212660706406",
+  "priceRange": "50dh - 800dh",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Marrakech",
+    "addressCountry": "MA"
+  },
+  "areaServed": "Marrakech",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00",
+    "closes": "21:00"
+  },
+  "sameAs": []
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0f0d0b;
+  --bg-soft: #161310;
+  --bg-card: #1c1916;
+  --gold: #c9a46c;
+  --gold-light: #dfc08a;
+  --gold-soft: rgba(201,164,108,0.14);
+  --cream: #f7f1e8;
+  --cream-soft: #e9e0d2;
+  --muted: #a39b8f;
+  --border: rgba(201,164,108,0.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--cream);overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(15,13,11,0.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--gold);letter-spacing:4px}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{color:var(--muted);font-size:12px;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;transition:color .25s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--bg)!important;padding:10px 24px;border-radius:100px;font-weight:600!important;font-size:12px!important;letter-spacing:1.5px!important;transition:all .25s}
+.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:140px 24px 100px;overflow:hidden}
+.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.48}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,11,0.35) 0%,rgba(15,13,11,0.55) 40%,rgba(15,13,11,0.88) 100%),radial-gradient(ellipse at 50% 30%,rgba(201,164,108,0.08) 0%,transparent 60%)}
+.hero-content{text-align:center;position:relative;z-index:2;max-width:740px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,6.2vw,64px);font-weight:600;color:var(--gold);letter-spacing:5px;text-transform:uppercase;line-height:1.12;margin-bottom:10px;text-shadow:0 2px 30px rgba(0,0,0,0.4)}
+.hero-tagline{font-family:'Playfair Display',serif;font-size:clamp(18px,2.7vw,26px);font-style:italic;color:var(--cream-soft);letter-spacing:3px;font-weight:400}
+.hero-line{width:70px;height:1px;background:var(--gold);margin:28px auto;opacity:0.75}
+.hero-desc{font-size:15.5px;color:rgba(233,224,210,0.88);line-height:1.85;max-width:540px;margin:0 auto 42px;font-weight:300}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{padding:15px 36px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;border:none;display:inline-block;transition:all .3s;cursor:pointer}
+.btn-primary{background:var(--gold);color:var(--bg)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,164,108,0.25)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold-soft);transform:translateY(-2px)}
+
+/* SECTIONS */
+section{padding:100px 24px}
+.section-header{text-align:center;margin-bottom:56px}
+.section-header h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4.2vw,38px);color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-weight:600}
+.section-header p{color:var(--muted);font-size:14px;margin-top:12px;font-weight:300}
+.section-line{width:48px;height:1px;background:var(--gold);margin:18px auto 0;opacity:0.55}
+
+/* ABOUT */
+.about-section{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;max-width:1120px;margin:0 auto;align-items:center}
+.about-img{border-radius:20px;overflow:hidden;border:1px solid var(--border);aspect-ratio:4/5;box-shadow:0 20px 50px rgba(0,0,0,0.35)}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-text h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.6vw,34px);color:var(--gold);letter-spacing:2px;margin-bottom:20px;font-weight:600}
+.about-text p{color:var(--muted);font-size:15px;line-height:1.9;margin-bottom:16px;font-weight:300}
+
+/* SERVICES */
+.services-section{background:var(--bg-soft)}
+.tabs-nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:48px}
+.tab-btn{padding:11px 22px;background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:100px;font-size:12px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;transition:all .25s}
+.tab-btn:hover{border-color:var(--gold);color:var(--gold)}
+.tab-btn.active{background:var(--gold);color:var(--bg);border-color:var(--gold);font-weight:600}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;max-width:1120px;margin:0 auto}
+.service-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:all .35s}
+.service-card:hover{border-color:rgba(201,164,108,0.4);transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,0.4)}
+.service-card h3{font-family:'Playfair Display',serif;font-size:16px;color:var(--cream);margin-bottom:4px;font-weight:500}
+.service-card .en{font-size:11px;color:var(--muted);display:block;margin-bottom:14px;font-weight:300;letter-spacing:0.3px}
+.service-card .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
+.service-card .price{font-family:'Playfair Display',serif;font-size:19px;color:var(--gold);font-weight:600}
+.service-card .dur{font-size:11px;color:var(--muted);background:var(--gold-soft);padding:4px 12px;border-radius:100px;letter-spacing:0.5px}
+
+/* HAMMAM */
+.hammam-section{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-soft) 100%)}
+.hammam-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1040px;margin:0 auto 56px}
+.hammam-photos img{border-radius:14px;height:210px;object-fit:cover;border:1px solid var(--border);width:100%;transition:transform .4s}
+.hammam-photos img:hover{transform:scale(1.02)}
+.hammam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;max-width:1040px;margin:0 auto}
+.hammam-card{background:var(--bg-card);border:1px solid var(--border);border-radius:18px;padding:36px;position:relative;transition:all .4s}
+.hammam-card:hover{transform:translateY(-4px);border-color:rgba(201,164,108,0.35)}
+.hammam-card.featured{border-color:rgba(201,164,108,0.45);background:linear-gradient(145deg,var(--bg-card) 0%,rgba(201,164,108,0.07) 100%)}
+.hammam-card.featured::after{content:'POPULAIRE';position:absolute;top:16px;right:-28px;background:var(--gold);color:var(--bg);font-size:9px;font-weight:700;letter-spacing:2px;padding:5px 34px;transform:rotate(45deg)}
+.hammam-card h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:8px;font-weight:500}
+.hammam-card .price-tag{font-family:'Playfair Display',serif;font-size:30px;color:var(--gold);font-weight:600;margin:14px 0}
+.hammam-card .price-tag span{font-size:14px;color:var(--muted);font-weight:400}
+.hammam-card p{font-size:14px;color:var(--muted);line-height:1.75;font-weight:300}
+.hammam-card .dur-badge{display:inline-block;background:var(--gold-soft);color:var(--gold);font-size:11px;font-weight:600;padding:5px 16px;border-radius:100px;margin-bottom:14px;letter-spacing:1.2px}
+
+/* REVIEWS */
+.reviews-section{background:var(--bg)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;max-width:1040px;margin:0 auto}
+.review-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .3s}
+.review-card:hover{border-color:rgba(201,164,108,0.35)}
+.review-stars{color:var(--gold);font-size:15px;margin-bottom:14px;letter-spacing:3px}
+.review-card p{color:var(--muted);font-size:14px;line-height:1.8;font-style:italic;margin-bottom:16px;font-weight:300}
+.review-name{color:var(--gold);font-size:12px;font-weight:600;letter-spacing:1px}
+
+/* FAQ */
+.faq-section{background:var(--bg-soft)}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:24px 0}
+.faq-item h3{font-family:'Playfair Display',serif;font-size:17px;color:var(--gold);margin-bottom:10px;font-weight:500}
+.faq-item p{color:var(--muted);font-size:14px;line-height:1.85;font-weight:300}
+
+/* CONTACT */
+.contact-section{background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;max-width:960px;margin:0 auto}
+.contact-card{text-align:center;padding:36px 24px;background:var(--bg-card);border:1px solid var(--border);border-radius:16px;transition:all .3s}
+.contact-card:hover{border-color:rgba(201,164,108,0.35);transform:translateY(-3px)}
+.contact-icon{width:52px;height:52px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:var(--gold);font-size:20px}
+.contact-card h4{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.contact-card p{font-size:14px;color:var(--muted);line-height:1.6;font-weight:300}
+.contact-card .big{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-top:4px;font-weight:500}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:48px 24px 32px;text-align:center}
+.footer-brand{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold);letter-spacing:5px;margin-bottom:10px}
+.footer-tagline{font-style:italic;color:var(--muted);font-size:14px;margin-bottom:28px;font-weight:300}
+.footer-social{display:flex;justify-content:center;gap:14px;margin-bottom:28px}
+.footer-social a{width:42px;height:42px;border:1px solid rgba(201,164,108,0.28);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:13px;font-weight:600;transition:all .25s}
+.footer-social a:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.footer-copy{font-size:11px;color:var(--muted);letter-spacing:1px;font-weight:300}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-img{max-width:420px;margin:0 auto}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .navbar{padding:16px 20px}
+  .hero{padding:120px 20px 70px}
+  .hero-bg-img{opacity:0.42}
+  .hero-btns{flex-direction:column;align-items:center}
+  .btn{width:100%;max-width:280px;text-align:center}
+  .tabs-nav{gap:8px}
+  .tab-btn{padding:9px 16px;font-size:11px}
+  section{padding:70px 18px}
+  .services-grid{grid-template-columns:1fr}
+  .hammam-grid{grid-template-columns:1fr}
+  .hammam-photos{grid-template-columns:1fr;gap:12px}
+  .hammam-photos img{height:220px}
+  .contact-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="#accueil" class="nav-logo">M&M SPA</a>
+  <ul class="nav-links">
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#hammam">Hammam</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:0660706406" class="nav-cta">Réserver</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="accueil">
+  <img class="hero-bg-img" src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Massage relaxant professionnel à domicile à Marrakech – M&M SPA" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>M&M SPA Marrakech</h1>
+    <p class="hero-tagline">Spa à domicile</p>
+    <div class="hero-line"></div>
+    <p class="hero-desc">Le spa à domicile de référence à Marrakech. Massages, hammam traditionnel marocain et soins de beauté livrés directement chez vous, dans votre riad, votre villa ou votre hôtel.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn btn-primary">Découvrir nos soins</a>
+      <a href="tel:0660706406" class="btn btn-outline">06 60 70 64 06</a>
+    </div>
+  </div>
+</section>
+
+<section class="about-section" id="apropos">
+  <div class="about-grid">
+    <div class="about-img">
+      <img src="https://images.pexels.com/photos/3865676/pexels-photo-3865676.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Massage professionnel à domicile Marrakech – expérience spa M&M SPA" loading="lazy">
+    </div>
+    <div class="about-text">
+      <h2>Le spa à domicile n°1 à Marrakech</h2>
+      <p>M&M SPA apporte l'excellence des instituts de beauté marocains directement chez vous, à Marrakech et dans ses environs. Que vous soyez en vacances dans un riad de la Médina, installé dans une villa de l'Hivernage ou de retour d'une longue journée, notre équipe de praticiennes qualifiées se déplace avec tout le matériel nécessaire.</p>
+      <p>Massage relaxant, hammam traditionnel au savon noir et au ghassoul, soins du visage, épilation ou manucure : chaque prestation est réalisée dans le respect des traditions marocaines du bien-être, pour une expérience spa authentique sans quitter votre domicile.</p>
+      <p>Disponible 7j/7 de 9h à 21h, réservation rapide par téléphone ou WhatsApp au 06 60 70 64 06.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="section-header">
+    <h2>Nos Prestations à Marrakech</h2>
+    <p>Des soins sur mesure pour votre bien-être, à domicile</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="tabs-nav">
+    <button class="tab-btn active" onclick="switchTab(this,'massage')">Massage</button>
+    <button class="tab-btn" onclick="switchTab(this,'visage')">Soins Visage</button>
+    <button class="tab-btn" onclick="switchTab(this,'epilation')">Épilation</button>
+    <button class="tab-btn" onclick="switchTab(this,'beaute')">Beauté</button>
+    <button class="tab-btn" onclick="switchTab(this,'coiffure')">Coiffure</button>
+  </div>
+
+  <div class="tab-content active" id="massage">
+    <div class="services-grid">
+      <div class="service-card"><h3>Massage relaxant</h3><span class="en">relaxing massage</span><div class="price-row"><span class="price">400 dh / 40€</span><span class="dur">1h</span></div></div>
+      <div class="service-card"><h3>Massage relaxant</h3><span class="en">relaxing massage</span><div class="price-row"><span class="price">300 dh / 30€</span><span class="dur">30 min</span></div></div>
+      <div class="service-card"><h3>Massage tonifiant</h3><span class="en">strong massage</span><div class="price-row"><span class="price">500 dh / 50€</span><span class="dur">50 min</span></div></div>
+      <div class="service-card"><h3>Massage Sport</h3><span class="en">Sport Massage</span><div class="price-row"><span class="price">500 dh / 50€</span><span class="dur">50 min</span></div></div>
+      <div class="service-card"><h3>Massage drainant</h3><span class="en">massage drainage</span><div class="price-row"><span class="price">600 dh / 60€</span><span class="dur">45 min</span></div></div>
+      <div class="service-card"><h3>Massage amincissant</h3><span class="en">slimming massage</span><div class="price-row"><span class="price">550 dh / 55€</span><span class="dur">45 min</span></div></div>
+      <div class="service-card"><h3>Massage réflexologie</h3><span class="en">Massage reflexology</span><div class="price-row"><span class="price">300 dh / 30€</span><span class="dur">30 min</span></div></div>
+      <div class="service-card"><h3>Massage femme enceinte</h3><span class="en">massage pregnancy</span><div class="price-row"><span class="price">400 dh / 40€</span><span class="dur">45 min</span></div></div>
+      <div class="service-card"><h3>Massage dos visage jambe</h3><span class="en">massage back face legs</span><div class="price-row"><span class="price">200 dh / 20€</span><span class="dur">30 min</span></div></div>
+      <div class="service-card"><h3>Massage relaxant</h3><span class="en">relaxing massage</span><div class="price-row"><span class="price">600 dh / 60€</span><span class="dur">1h30</span></div></div>
+      <div class="service-card"><h3>Massage 4 mains</h3><span class="en">massage 4 hands</span><div class="price-row"><span class="price">800 dh / 80€</span><span class="dur">—</span></div></div>
+      <div class="service-card"><h3>Massage kobido</h3><span class="en">kobido massage</span><div class="price-row"><span class="price">300 dh / 30€</span><span class="dur">—</span></div></div>
+      <div class="service-card"><h3>Massage aux pierres chaudes</h3><span class="en">massage hot stone</span><div class="price-row"><span class="price">600 dh / 60€</span><span class="dur">—</span></div></div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="visage">
+    <div class="services-grid">
+      <div class="service-card"><h3>Soin visage éclat</h3><span class="en">Instant Shine Facial</span><div class="price-row"><span class="price">300 dh / 30€</span><span class="dur">30 min</span></div></div>
+      <div class="service-card"><h3>Soin visage Berbère</h3><span class="en">Berbere Facial</span><div class="price-row"><span class="price">400 dh / 40€</span><span class="dur">1h</span></div></div>
+      <div class="service-card"><h3>Soin de visage anti-rides</h3><span class="en">Anti-wrinkle facial</span><div class="price-row"><span class="price">500 dh / 50€</span><span class="dur">1h</span></div></div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="epilation">
+    <div class="services-grid">
+      <div class="service-card"><h3>Duvet</h3><span class="en">Upper Lip</span><div class="price-row"><span class="price">50 dh / 5€</span></div></div>
+      <div class="service-card"><h3>Sourcils</h3><span class="en">Eyebrows</span><div class="price-row"><span class="price">50 dh / 5€</span></div></div>
+      <div class="service-card"><h3>Aisselles</h3><span class="en">Armpits</span><div class="price-row"><span class="price">70 dh / 7€</span></div></div>
+      <div class="service-card"><h3>1/2 Jambes</h3><span class="en">Half Leg</span><div class="price-row"><span class="price">100 dh / 10€</span></div></div>
+      <div class="service-card"><h3>Jambes Complète</h3><span class="en">Full Leg</span><div class="price-row"><span class="price">150 dh / 15€</span></div></div>
+      <div class="service-card"><h3>Bras</h3><span class="en">Arms</span><div class="price-row"><span class="price">80 dh / 8€</span></div></div>
+      <div class="service-card"><h3>Dos</h3><span class="en">Back</span><div class="price-row"><span class="price">100 dh / 10€</span></div></div>
+      <div class="service-card"><h3>Maillot Bords</h3><span class="en">Simple Bikini</span><div class="price-row"><span class="price">100 dh / 10€</span></div></div>
+      <div class="service-card"><h3>Maillot Brésilien</h3><span class="en">brazilian Bikini</span><div class="price-row"><span class="price">150 dh / 15€</span></div></div>
+      <div class="service-card"><h3>Maillot Intégral</h3><span class="en">full Bikini</span><div class="price-row"><span class="price">200 dh / 20€</span></div></div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="beaute">
+    <div class="services-grid">
+      <div class="service-card"><h3>Soin beauté des mains</h3><div class="price-row"><span class="price">200 dh / 20€</span></div></div>
+      <div class="service-card"><h3>Soin Beauté des pieds</h3><div class="price-row"><span class="price">250 dh / 25€</span></div></div>
+      <div class="service-card"><h3>Manucure Pose Vernis Permanent</h3><div class="price-row"><span class="price">350 dh / 35€</span></div></div>
+      <div class="service-card"><h3>Pédicure Pose Vernis Permanent</h3><div class="price-row"><span class="price">400 dh / 40€</span></div></div>
+      <div class="service-card"><h3>Démaquiller Vernis Permanent</h3><span class="en">Permanent Polish Removals</span><div class="price-row"><span class="price">80 dh / 8€</span></div></div>
+      <div class="service-card"><h3>Manucure pose gel</h3><div class="price-row"><span class="price">500 dh / 50€</span></div></div>
+      <div class="service-card"><h3>Gel</h3><div class="price-row"><span class="price">600 dh / 60€</span></div></div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="coiffure">
+    <div class="services-grid">
+      <div class="service-card"><h3>Brushing court</h3><span class="en">Brushing short hair</span><div class="price-row"><span class="price">200 dh / 20€</span></div></div>
+      <div class="service-card"><h3>Brushing long</h3><span class="en">Brushing long hair</span><div class="price-row"><span class="price">300 dh / 30€</span></div></div>
+      <div class="service-card"><h3>Brushing bouclé</h3><div class="price-row"><span class="price">400 dh / 40€</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="hammam-section" id="hammam">
+  <div class="section-header">
+    <h2>L'Expérience Hammam</h2>
+    <p>Tradition marocaine authentique à domicile, à Marrakech</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="hammam-photos">
+    <img src="https://images.pexels.com/photos/6628649/pexels-photo-6628649.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Soin hammam traditionnel marocain à domicile Marrakech – M&M SPA" loading="lazy">
+    <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Massage après hammam à domicile Marrakech – spa mobile professionnel" loading="lazy">
+    <img src="https://images.pexels.com/photos/3865676/pexels-photo-3865676.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ambiance détente et bien-être à domicile Marrakech M&M SPA" loading="lazy">
+  </div>
+  <div class="hammam-grid">
+    <div class="hammam-card">
+      <span class="dur-badge">30 MIN</span>
+      <h3>Hammam Traditionnel</h3>
+      <div class="price-tag">300 dh <span>/ 30€</span></div>
+      <p>Gommage au savon noir parfumé à l'eucalyptus pour faire peau neuve et détendre les muscles.</p>
+    </div>
+    <div class="hammam-card featured">
+      <span class="dur-badge">45 MIN</span>
+      <h3>Royal Hammam</h3>
+      <div class="price-tag">350 dh <span>/ 35€</span></div>
+      <p>Gommage au savon noir suivi d'un enveloppement au ghassoul.</p>
+    </div>
+    <div class="hammam-card">
+      <span class="dur-badge">70 MIN</span>
+      <h3>Pack Hammam + Massage</h3>
+      <div class="price-tag">750 dh <span>/ 75€</span></div>
+      <p>La combinaison parfaite pour une relaxation totale.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section" id="avis">
+  <div class="section-header">
+    <h2>Avis de nos clients</h2>
+    <p>Ce que disent nos clients à Marrakech</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>Massage impeccable directement dans notre riad, praticienne très professionnelle. Je recommande M&M SPA à Marrakech sans hésiter.</p>
+      <div class="review-name">— Sophie, Marrakech</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>Le hammam traditionnel était une vraie découverte, tout le matériel apporté, ponctualité parfaite. Un service de qualité à domicile.</p>
+      <div class="review-name">— Karim, Marrakech</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>Réservation simple par WhatsApp, rendez-vous confirmé rapidement. Le massage aux pierres chaudes était excellent.</p>
+      <div class="review-name">— Amina, Marrakech</div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="section-header">
+    <h2>Questions fréquentes</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>Le spa à domicile est-il disponible partout à Marrakech ?</h3>
+      <p>Oui, M&M SPA se déplace dans toute la ville de Marrakech : Médina, Guéliz, Hivernage, Palmeraie, ainsi que dans les riads et hôtels.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Combien de temps à l'avance dois-je réserver ?</h3>
+      <p>Un simple appel ou message WhatsApp au 06 60 70 64 06 suffit. Dans la mesure du possible, réservez quelques heures à l'avance pour garantir la disponibilité.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Le matériel est-il apporté par la praticienne ?</h3>
+      <p>Oui, table de massage, produits et matériel pour le hammam sont apportés directement chez vous, dans votre riad ou votre hôtel à Marrakech.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Quels moyens de paiement acceptez-vous ?</h3>
+      <p>Le paiement s'effectue en espèces directement auprès de la praticienne, en dirhams ou en euros.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="section-header">
+    <h2>Contactez-nous</h2>
+    <p>Réservez votre moment de bien-être à Marrakech</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-icon">📞</div>
+      <h4>Téléphone</h4>
+      <p class="big">06 60 70 64 06</p>
+      <p>Appel & WhatsApp</p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">📅</div>
+      <h4>Horaires</h4>
+      <p class="big">7 jours / 7</p>
+      <p>De 9h à 21h</p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">🏠</div>
+      <h4>À domicile</h4>
+      <p>Nous nous déplaçons chez vous, partout à Marrakech.</p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">📱</div>
+      <h4>Réseaux</h4>
+      <p class="big">M&M_SPA</p>
+      <p>Instagram · TikTok · Snapchat</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">M&M SPA</div>
+  <p class="footer-tagline">Spa à domicile à Marrakech — Votre bien-être, notre passion</p>
+  <div class="footer-social">
+    <a href="#">Ig</a>
+    <a href="#">Tk</a>
+    <a href="#">Sc</a>
+    <a href="tel:0660706406">📞</a>
+  </div>
+  <p class="footer-copy">© 2026 M&M SPA Marrakech — Tous droits réservés</p>
+</footer>
+
+<script>
+function switchTab(btn, tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(tab).classList.add('active');
+}
+</script>
+</body>
+</html>
