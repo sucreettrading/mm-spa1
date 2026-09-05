@@ -62,6 +62,70 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--cream);over
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes goldLine {
+  from { width: 0; }
+  to { width: 70px; }
+}
+
+.animate { opacity: 0; }
+.animate.visible { animation: fadeInUp 0.8s ease forwards; }
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }
+
+.hero-content h1 { animation: fadeInUp 1s ease 0.2s both; }
+.hero-tagline { animation: fadeInUp 1s ease 0.4s both; }
+.hero-line { animation: goldLine 1s ease 0.6s both; }
+.hero-desc { animation: fadeInUp 1s ease 0.7s both; }
+.hero-btns { animation: fadeInUp 1s ease 0.9s both; }
+
+.service-card, .hammam-card, .review-card, .contact-card, .faq-item {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.service-card:hover, .hammam-card:hover, .review-card:hover, .contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  border-color: rgba(201,164,108,0.45);
+}
+
+.tab-content { animation: fadeIn 0.4s ease; }
+.btn { transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.nav-links a { position: relative; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+
 /* NAV */
 .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(15,13,11,0.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
 .nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--gold);letter-spacing:4px}
@@ -446,8 +510,37 @@ function switchTab(btn, tab) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
   btn.classList.add('active');
-  document.getElementById(tab).classList.add('active');
+  const content = document.getElementById(tab);
+  content.classList.add('active');
 }
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.section-header, .about-grid, .service-card, .hammam-card, .review-card, .contact-card, .faq-item, .hammam-photos img, .about-img').forEach(el => {
+  el.classList.add('animate');
+  observer.observe(el);
+});
+
+// Stagger service cards
+document.querySelectorAll('.services-grid .service-card').forEach((card, i) => {
+  card.style.animationDelay = (i * 0.06) + 's';
+});
+document.querySelectorAll('.hammam-grid .hammam-card').forEach((card, i) => {
+  card.style.animationDelay = (i * 0.12) + 's';
+});
+document.querySelectorAll('.reviews-grid .review-card').forEach((card, i) => {
+  card.style.animationDelay = (i * 0.12) + 's';
+});
+document.querySelectorAll('.contact-grid .contact-card').forEach((card, i) => {
+  card.style.animationDelay = (i * 0.1) + 's';
+});
 </script>
 </body>
 </html>
